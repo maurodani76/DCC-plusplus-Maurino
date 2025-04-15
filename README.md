@@ -1,8 +1,9 @@
 # DCC++
 
-codice pescato dal sito di Luca Dentella e adattato per mie esigenze
+codice pescato dal sito di Luca Dentella (grazie Luca!) e adattato per mie esigenze
 
-- il codice per 2 solenoidi include già gli indirizzi giusti per il plastico (7 e 8)
+- il codice per 2 solenoidi include già gli indirizzi giusti per il plastico (7 e 8) e 500ms di attivazione per ogni uscita
+- il codice per 2 solenoidi è scritto per comandare una scheda relè classica con optoisolatori e attivazioni a massa (ACTIVE LOW); quindi pin HIGH appena prima della definizione pinmode OUTPUT... funziona: nessuna attivazione non voluta dei relè all'accensione o reset di arduino
 - da includere libreria nmradcc (si trova nella lista libreria di Arduino IDE)
 - da includere libreria ezLED (sempre in lista libreria...) per il codice "signal"
 
@@ -12,5 +13,6 @@ per scelta NON ho implementato la gestione delle CV per non complicare inutilmen
 schema per il collegamento ad arduino del segnale DCC (usare resistore da 1kohm almeno 1/2 watt):
 https://arduino.stackexchange.com/questions/19686/optocouplers-for-arduino-dcc-decoder-explain
 
+-------------------
 > [!NOTE]
 > nella scheda prototipo che ho fatto e che finirà sotto al mio plastico a comandare gli scambi che vanno ai depositi NON ho previsto nulla che impedisca al 5v di arduino ALIMENTATO CON USB di finire sull'uscita del regolatore 7805 (non ho idea se faccia danni oppure no...): quindi ARDUINO NANO VA TOLTO DALLA BASETTA OGNI VOLTA CHE LO SI PROGRAMMA!!  Prossime schede inserisco un semplice jumper che impedisce alimentazione di ritorno al 7805.
