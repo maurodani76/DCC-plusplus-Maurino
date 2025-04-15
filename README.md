@@ -15,4 +15,5 @@ https://arduino.stackexchange.com/questions/19686/optocouplers-for-arduino-dcc-d
 
 -------------------
 > [!NOTE]
-> nella scheda prototipo che ho fatto e che finirà sotto al mio plastico a comandare gli scambi che vanno ai depositi NON ho previsto nulla che impedisca al 5v di arduino ALIMENTATO CON USB di finire sull'uscita del regolatore 7805 (non ho idea se faccia danni oppure no...): quindi ARDUINO NANO VA TOLTO DALLA BASETTA OGNI VOLTA CHE LO SI PROGRAMMA!!  Prossime schede inserisco un semplice jumper che impedisce alimentazione di ritorno al 7805.
+> nella scheda prototipo che ho fatto e che finirà sotto al mio plastico NON ho previsto nulla che impedisca al 5v di arduino ALIMENTATO CON USB di finire sull'uscita del regolatore 7805: inserirò un diodo di protezione (1n4001) all'ingresso INPUT del regolatore per proteggere anche dalla corrente di scarica di ritorno dei condensatori
+> - thread esaustivo: https://forum.arduino.cc/t/using-diodes-in-lm7805-design-circuits/921152/9
